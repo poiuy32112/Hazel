@@ -7,6 +7,9 @@
     <Filter Include="src\Hazel">
       <UniqueIdentifier>{92966cf3-1461-4756-a877-2da1f5ada16f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Hazel\Events">
+      <UniqueIdentifier>{1ad49a7c-e92f-4733-92cc-76983ba0d1e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
@@ -24,6 +27,24 @@
     <ClInclude Include="Log.h">
       <Filter>src\Hazel</Filter>
     </ClInclude>
+    <ClInclude Include="ApplicationEvent.h">
+      <Filter>src\Hazel\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>src\Hazel\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyEvent.h">
+      <Filter>src\Hazel\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseEvent.h">
+      <Filter>src\Hazel\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Event1.h">
+      <Filter>src\Hazel\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="hzpch.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp">
@@ -31,6 +52,9 @@
     </ClCompile>
     <ClCompile Include="Log.cpp">
       <Filter>src\Hazel</Filter>
+    </ClCompile>
+    <ClCompile Include="hzpch.cpp">
+      <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

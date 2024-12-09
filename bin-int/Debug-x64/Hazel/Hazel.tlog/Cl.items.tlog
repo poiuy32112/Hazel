@@ -1,2 +1,3 @@
-D:\c++(vs2022)\Hazel\Hazel\Application.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-x64\Hazel\Application.obj
-D:\c++(vs2022)\Hazel\Hazel\Log.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-x64\Hazel\Log.obj
+D:\c++(vs2022)\myHazel\Hazel\Application.cpp;D:\c++(vs2022)\myHazel\bin-int\Debug-x64\Hazel\Application.obj
+D:\c++(vs2022)\myHazel\Hazel\hzpch.cpp;D:\c++(vs2022)\myHazel\bin-int\Debug-x64\Hazel\hzpch.obj
+D:\c++(vs2022)\myHazel\Hazel\Log.cpp;D:\c++(vs2022)\myHazel\bin-int\Debug-x64\Hazel\Log.obj
