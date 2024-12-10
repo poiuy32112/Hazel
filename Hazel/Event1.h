@@ -5,6 +5,8 @@
 #include <string>
 #include <functional>
 
+#include <sstream>
+
 namespace Hazel
 {
 
