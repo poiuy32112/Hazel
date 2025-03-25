@@ -1,6 +1,8 @@
 D:\c++(vs2022)\Hazel\Hazel\src\Hazel\Application.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\Application.obj
+D:\c++(vs2022)\Hazel\Hazel\src\Hazel\ImGui\ImGuiLayer.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\ImGuiLayer.obj
 D:\c++(vs2022)\Hazel\Hazel\src\Hazel\Layer.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\Layer.obj
 D:\c++(vs2022)\Hazel\Hazel\src\Hazel\LayerStack.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\LayerStack.obj
 D:\c++(vs2022)\Hazel\Hazel\src\Hazel\Log.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\Log.obj
+D:\c++(vs2022)\Hazel\Hazel\src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\ImGuiOpenGLRenderer.obj
 D:\c++(vs2022)\Hazel\Hazel\src\Platform\Windows\WindowsWindow.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\WindowsWindow.obj
 D:\c++(vs2022)\Hazel\Hazel\src\hzpch.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\hzpch.obj
