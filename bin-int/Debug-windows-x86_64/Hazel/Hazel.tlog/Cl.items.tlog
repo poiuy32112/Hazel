@@ -14,6 +14,7 @@ D:\c++(vs2022)\Hazel\Hazel\src\Hazel\Renderer\VertexArray.cpp;D:\c++(vs2022)\Haz
 D:\c++(vs2022)\Hazel\Hazel\src\Platform\OpenGL\OpenGLBuffer.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\OpenGLBuffer.obj
 D:\c++(vs2022)\Hazel\Hazel\src\Platform\OpenGL\OpenGLContext.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\OpenGLContext.obj
 D:\c++(vs2022)\Hazel\Hazel\src\Platform\OpenGL\OpenGLRendererAPI.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\OpenGLRendererAPI.obj
+D:\c++(vs2022)\Hazel\Hazel\src\Platform\OpenGL\OpenGLShader.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\OpenGLShader.obj
 D:\c++(vs2022)\Hazel\Hazel\src\Platform\OpenGL\OpenGLVertexArray.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\OpenGLVertexArray.obj
 D:\c++(vs2022)\Hazel\Hazel\src\Platform\Windows\WindowsInput.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\WindowsInput.obj
 D:\c++(vs2022)\Hazel\Hazel\src\Platform\Windows\WindowsWindow.cpp;D:\c++(vs2022)\Hazel\bin-int\Debug-windows-x86_64\Hazel\WindowsWindow.obj
