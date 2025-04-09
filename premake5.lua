@@ -1,11 +1,17 @@
 workspace "Hazel"
- 	architecture "x64"
+ 	architecture "x86_64"
+ 	startproject "Sandbox"
  
  	configurations
  	{
  		"Debug",
  		"Release",
  		"Dist"
+ 	}
+
+    flags
+ 	{
+ 		"MultiProcessorCompile"
  	}
  
  outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
@@ -17,6 +23,13 @@ workspace "Hazel"
  IncludeDir["ImGui"] = "Hazel/vendor/imgui"
  IncludeDir["glm"] = "Hazel/vendor/glm"
  IncludeDir["stb_image"] = "Hazel/vendor/stb_image"
+
+ group "Dependencies"
+ 	include "Hazel/vendor/GLFW"
+ 	include "Hazel/vendor/Glad"
+ 	include "Hazel/vendor/imgui"
+ 
+ group ""
  
  include "Hazel/vendor/GLFW"
  include "Hazel/vendor/Glad"
@@ -152,4 +165,52 @@ workspace "Hazel"
  		defines "HZ_DIST"
         buildoptions "/MD /utf-8"
         runtime "Release"
+ 		optimize "on"
+
+
+ project "Hazel-Editor"
+ 	location "Hazel-Editor"
+ 	kind "ConsoleApp"
+ 	language "C++"
+ 	cppdialect "C++17"
+ 	staticruntime "on"
+ 
+ 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+ 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+ 
+ 	files
+ 	{
+ 		"%{prj.name}/src/**.h",
+ 		"%{prj.name}/src/**.cpp"
+ 	}
+ 
+ 	includedirs
+ 	{
+ 		"Hazel/vendor/spdlog/include",
+ 		"Hazel/src",
+ 		"Hazel/vendor",
+ 		"%{IncludeDir.glm}"
+ 	}
+ 
+ 	links
+ 	{
+ 		"Hazel"
+ 	}
+ 
+ 	filter "system:windows"
+ 		systemversion "latest"
+ 		
+ 	filter "configurations:Debug"
+ 		defines "HZ_DEBUG"
+ 		runtime "Debug"
+ 		symbols "on"
+ 
+ 	filter "configurations:Release"
+ 		defines "HZ_RELEASE"
+ 		runtime "Release"
+ 		optimize "on"
+ 
+ 	filter "configurations:Dist"
+ 		defines "HZ_DIST"
+ 		runtime "Release"
  		optimize "on"
