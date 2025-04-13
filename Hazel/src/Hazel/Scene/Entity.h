@@ -31,7 +31,8 @@ namespace Hazel
         template<typename T>
         bool HasComponent()
         {
-            return m_Scene->m_Registry.has<T>(m_EntityHandle);
+            if (!m_Scene) return false; // 在调用m_Scene的方法前添加检查
+            return m_Scene->m_Registry.all_of<T>(m_EntityHandle);
         }
 
         template<typename T>
