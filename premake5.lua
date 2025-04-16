@@ -24,17 +24,20 @@ workspace "Hazel"
  IncludeDir["glm"] = "Hazel/vendor/glm"
  IncludeDir["stb_image"] = "Hazel/vendor/stb_image"
  IncludeDir["entt"] = "Hazel/vendor/entt/include"
+ IncludeDir["yaml_cpp"] = "Hazel/vendor/yaml-cpp/include"
 
  group "Dependencies"
  	include "Hazel/vendor/GLFW"
  	include "Hazel/vendor/Glad"
  	include "Hazel/vendor/imgui"
+ 	include "Hazel/vendor/yaml-cpp"
  
  group ""
  
  include "Hazel/vendor/GLFW"
  include "Hazel/vendor/Glad"
  include "Hazel/vendor/imgui"
+ include "Hazel/vendor/yaml-cpp"
  
  project "Hazel"
  	location "Hazel"
@@ -42,7 +45,7 @@ workspace "Hazel"
  	language "C++"
 
     cppdialect "C++17"
- 	staticruntime "on"
+ 	staticruntime "off"
  
  	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
  	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -74,7 +77,8 @@ workspace "Hazel"
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
- 		"%{IncludeDir.entt}"
+ 		"%{IncludeDir.entt}",
+		"%{IncludeDir.yaml_cpp}"
  	}
  
  	links 
@@ -82,6 +86,7 @@ workspace "Hazel"
  		"GLFW",
         "Glad",
         "ImGui",
+		"yaml-cpp",
  		"opengl32.lib"
  	}
  
@@ -92,24 +97,25 @@ workspace "Hazel"
  		{
  			"HZ_PLATFORM_WINDOWS",
 			"HZ_BUILD_DLL",
- 			"GLFW_INCLUDE_NONE"
+ 			"GLFW_INCLUDE_NONE",
+			"YAML_CPP_STATIC_DEFINE"
  		}
  
  	filter "configurations:Debug"
  		defines "HZ_DEBUG"
-        buildoptions "/MD /utf-8"
+        buildoptions "/utf-8"
         runtime "Debug"
  		symbols "on"
  
  	filter "configurations:Release"
  		defines "HZ_RELEASE"
-        buildoptions "/MD /utf-8"
+        buildoptions "/utf-8"
         runtime "Release"
  		optimize "on"
  
  	filter "configurations:Dist"
  		defines "HZ_DIST"
-        buildoptions "/MD /utf-8"
+        buildoptions "/utf-8"
         runtime "Release"
  		optimize "on"
  
@@ -119,7 +125,7 @@ workspace "Hazel"
  	language "C++"
 
     cppdialect "C++17"
- 	staticruntime "on"
+ 	staticruntime "off"
  
  	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
  	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -153,19 +159,19 @@ workspace "Hazel"
  
  	filter "configurations:Debug"
  		defines "HZ_DEBUG"
-        buildoptions "/MD /utf-8"
+        buildoptions "/utf-8"
         runtime "Debug"
  		symbols "on"
  
  	filter "configurations:Release"
  		defines "HZ_RELEASE"
-        buildoptions "/MD /utf-8"
+        buildoptions "/utf-8"
         runtime "Release"
  		optimize "on"
  
  	filter "configurations:Dist"
  		defines "HZ_DIST"
-        buildoptions "/MD /utf-8"
+        buildoptions "/utf-8"
         runtime "Release"
  		optimize "on"
 
@@ -175,7 +181,7 @@ project "Hazelnut"
  	kind "ConsoleApp"
  	language "C++"
  	cppdialect "C++17"
- 	staticruntime "on"
+ 	staticruntime "off"
  
  	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
  	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -192,28 +198,39 @@ project "Hazelnut"
  		"Hazel/src",
  		"Hazel/vendor",
 		"%{IncludeDir.glm}",
- 		"%{IncludeDir.entt}"
+ 		"%{IncludeDir.entt}",
+		"%{IncludeDir.yaml_cpp}"
  	}
  
  	links
  	{
- 		"Hazel"
+ 		"Hazel",
+		"yaml-cpp"
  	}
  
  	filter "system:windows"
  		systemversion "latest"
+		
+		defines
+		{
+			"HZ_PLATFORM_WINDOWS",
+			"YAML_CPP_STATIC_DEFINE"
+		}
  		
  	filter "configurations:Debug"
  		defines "HZ_DEBUG"
  		runtime "Debug"
+		buildoptions "/utf-8"
  		symbols "on"
  
  	filter "configurations:Release"
  		defines "HZ_RELEASE"
  		runtime "Release"
+		buildoptions "/utf-8"
  		optimize "on"
  
  	filter "configurations:Dist"
  		defines "HZ_DIST"
  		runtime "Release"
+		buildoptions "/utf-8"
  		optimize "on"
