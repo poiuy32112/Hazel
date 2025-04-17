@@ -12,7 +12,6 @@ namespace Hazel
     public:
         static bool IsKeyPressed(KeyCode key);
 
-    private:
         static bool IsMouseButtonPressed(MouseCode button);
         static std::pair<float, float> GetMousePosition();
         static float GetMouseX();
