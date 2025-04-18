@@ -227,7 +227,7 @@ namespace Hazel
         ImGui::Begin("Stats");
 
         std::string name = "None";
-        if (m_HoveredEntity)
+        if (m_HoveredEntity && m_HoveredEntity.HasComponent<TagComponent>())
             name = m_HoveredEntity.GetComponent<TagComponent>().Tag;
         ImGui::Text("Hovered Entity: %s", name.c_str());
 
@@ -329,6 +329,7 @@ namespace Hazel
 
         EventDispatcher dispatcher(e);
         dispatcher.Dispatch<KeyPressedEvent>(HZ_BIND_EVENT_FN(EditorLayer::OnKeyPressed));
+        dispatcher.Dispatch<MouseButtonPressedEvent>(HZ_BIND_EVENT_FN(EditorLayer::OnMouseButtonPressed));
     }
 
     bool EditorLayer::OnKeyPressed(KeyPressedEvent& e)
@@ -377,6 +378,16 @@ namespace Hazel
             m_GizmoType = ImGuizmo::OPERATION::SCALE;
             break;
         }
+    }
+
+    bool EditorLayer::OnMouseButtonPressed(MouseButtonPressedEvent& e)
+    {
+        if (e.GetMouseButton() == static_cast<int>(Mouse::ButtonLeft))
+        {
+            if (m_ViewportHovered && !ImGuizmo::IsOver() && !Input::IsKeyPressed(Key::LeftAlt))
+                m_SceneHierarchyPanel.SetSelectedEntity(m_HoveredEntity);
+        }
+        return false;
     }
 
     void EditorLayer::NewScene()

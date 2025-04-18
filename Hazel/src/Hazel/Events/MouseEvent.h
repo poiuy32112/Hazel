@@ -104,4 +104,8 @@ namespace Hazel
         EVENT_CLASS_TYPE(MouseButtonReleased)
     };
 
+    //bool operator== (const int c1, const )
+    //{
+
+    //}
 }
