@@ -1,12 +1,12 @@
-# Hazel Engine - 高性能2D游戏引擎
+# Hazel Engine - 高性能跨平台图形引擎
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20x64-lightgrey.svg)]()
 [![Build System](https://img.shields.io/badge/Build-Premake5-orange.svg)]()
 
-**Hazel** 是一款为现代游戏开发工作流程设计的高性能、模块化2D游戏引擎。基于C++17从底层构建，提供了用于创建交互式应用程序和游戏的专业级性能工具套件。
+**Hazel** 是一款为图形渲染而设计的高性能、模块化、跨平台的图形引擎。基于C++17从底层构建，通过高效的渲染抽象层和性能优化机制，为多媒体播控、数据可视化和2D图形应用提供图形渲染解决方案。
 
-> 该项目始于对游戏引擎架构的探索，最初从包括TheCherno引擎开发系列在内的教育资源中汲取灵感，但已发展为具有自定义架构决策和优化的独立实现。
+> 该项目最初从包括TheCherno引擎开发系列在内的教育资源中汲取灵感，但已发展为具有自定义架构决策和优化的独立实现。
 
 ---
 
@@ -28,12 +28,8 @@ git submodule update --init
 
 **2. 配置依赖项：**
 
-1. 运行位于 `scripts` 文件夹中的 `Setup.bat` 文件。这将下载项目所需的依赖项。
-2. 该脚本会检查 Vulkan SDK 是否已安装。如果未安装，脚本将提示安装。
-3. 安装完成后，再次运行 `Setup.bat` 文件。
-4. 脚本将自动执行 `Win-GenProjects.bat`，生成 Visual Studio 解决方案文件。
-
-如果需要重新生成项目文件，请重新运行位于 `scripts` 文件夹中的 `Win-GenProjects.bat` 脚本。
+运行位于 `Hazel` 文件夹中的 `GenerateProjects.bat` 文件。这将自动
+完成项目文件配置并生成 Visual Studio 解决方案文件。
 
 ---
 ## 🎯 核心特性
