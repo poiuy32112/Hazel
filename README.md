@@ -4,7 +4,7 @@
 [![Platform](https://img.shields.io/badge/Platform-Windows%20x64-lightgrey.svg)]()
 [![Build System](https://img.shields.io/badge/Build-Premake5-orange.svg)]()
 
-**Hazel** 是一款为图形渲染而设计的高性能、模块化、跨平台的图形引擎。基于C++17从底层构建，通过高效的渲染抽象层和性能优化机制，为多媒体播控、数据可视化和2D图形应用提供图形渲染解决方案。
+**Hazel** 是一款专为2D游戏开发而设计的高性能、模块化、跨平台的游戏引擎。基于C++17从底层构建，通过优化的2D渲染管线、完整的游戏开发工具链和现代ECS架构，为2D游戏开发提供完整的解决方案。
 
 > 该项目最初从包括TheCherno引擎开发系列在内的教育资源中汲取灵感，但已发展为具有自定义架构决策和优化的独立实现。
 
