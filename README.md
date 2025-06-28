@@ -1,4 +1,4 @@
-# Hazel Engine - 高性能跨平台图形引擎
+# Hazel Engine - 高性能跨平台2D游戏引擎
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20x64-lightgrey.svg)]()
